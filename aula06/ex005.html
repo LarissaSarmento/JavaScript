@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <h1>Estudos DOM</h1>
+    <div id="msg">Clique aqui</div>
+    <p>Usando DOM</p>
+
+    <script>
+        var p1 =  window.document.getElementsByTagName('p')[0] // Seleciono o Elemento 'p' do HTML e [0] determino que é o primeiro zero, caso tivessem outros inserir o número
+        window.document.write('Descrito dessa forma: '+ p1.innerText)
+
+        var msg = window.document.querySelector('#msg') // Slecionei esse elemento e alterei a descrição
+        msg.innerHTML="msg alterada" // Inner permite obter ou alterar um elemento html
+        // O Ponto é usado em JS para para acessar propriedades e métodos de um objeto em JS. ex msg representa o elemento DOM, innerHTML é uma propriedade desse elemento.
+
+        
+
+        
+</script>
+</body>
+</html>

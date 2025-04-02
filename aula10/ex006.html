@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #area{
+            font-size: 1.5em;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: rgba(56, 149, 255, 0.582);
+            color: white;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            margin: auto;
+
+
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div id="area">
+            <strong>Interaja...</strong>
+        </div>
+    </section>
+
+   <script>
+
+    var a = window.document.querySelector('#area')
+    a.addEventListener('click', clicar)
+    a.addEventListener('mouseenter', entrar)
+    a.addEventListener('mouseout', sair)
+
+        function clicar() {
+        a.innerHTML="Clicou!"
+    }
+
+    function entrar() { 
+        a.innerHTML="Passou o mouse!"
+    }
+
+    function sair() {
+        a.innerHTML="Saiu"
+    }
+
+   </script>
+</body>
+</html>
