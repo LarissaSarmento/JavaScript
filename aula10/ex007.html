@@ -4,12 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somando numeros</title>
+    
 </head>
 <body>
     <h1>Somando valores</h1>
     <input type="number" name="txtn1" id="txtn1">
     <input type="number" name="txtn2" id="txtn2">
 
-    
+    <input type="button" value="Somar" id="somar" onclick="somar()">
+    <div id="res">Resultado: </div>
+
+    <script>
+
+        function somar() {
+            var tn1 = window.document.querySelector('#txtn1')
+            var tn2 = window.document.querySelector('#txtn2')
+            var som = window.document.querySelector('#somar')
+            var res = window.document.querySelector('#res')
+            var n1 = Number(txtn1.value)// usa .value para pegar o valor, se não pegaria o <input> e não o valor dentro dele.
+            var n2 = Number(txtn2.value)
+
+            var s = n1 + n2
+
+            res.innerHTML= `A soma de ${n1} e ${n2} é igual a: ${s}`
+                 
+        }
+    </script>
 </body>
 </html>
