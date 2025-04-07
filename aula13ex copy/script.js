@@ -1,4 +1,4 @@
-function carregar() {
+function carregar() { // O Parenteses manda o JS rodar a função. A Função é um comando que faz alguma coisa.
     var msg = document.querySelector('#msg')
     var img = document.querySelector('#imagem')
     var data = new Date()
@@ -18,6 +18,5 @@ function carregar() {
         //Boa noite
         img.src = 'imagens/pexels-pedro-figueras-202443-681467 (1).jpg'
         document.body.style.background = '#515154'
-    }
-       
+    }         
 }
