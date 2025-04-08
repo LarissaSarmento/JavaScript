@@ -12,6 +12,7 @@ function verificar() {
     var genero = ''
     var img = document.createElement('img')
     img.setAttribute('id', 'foto') // É o mesmo que ir no HTML e inserir-- <img id="foto">
+    
     if (fsex[0].checked){
         genero = 'Homem'
         if (idade >=0 && idade < 10){
@@ -20,13 +21,14 @@ function verificar() {
         }else if (idade < 21){
             img.setAttribute('src','imagens/pexels-sebastiaan9977-1304647.jpg')
             // Jovem
-        }else if (idade > 50) {
-            img.setAttribute('src', 'imagens/WhatsApp Image 2024-10-29 at 15.01.41.jpeg')
+        }else if (idade < 50) {
+            img.setAttribute('src', 'imagens/pexels-casnafu-31530118.jpg')
             //Adulto
         }else {
-            img.setAttribute('src', 'imagens/pexels-olly-3768117.jpg')
+            img.setAttribute('src', 'imagens/pexels-hasanalbari-1652340.jpg')
             //idoso
         }
+
     } else if (fsex[1].checked) {
         genero = 'Mulher'
         if (idade >=0 && idade < 10){
@@ -36,7 +38,7 @@ function verificar() {
             img.setAttribute('src', 'imagens/pexels-pixabay-264614.jpg')
             // Jovem
         }else if (idade < 50) {
-            img.setAttribute('src', 'imagens/WhatsApp Image 2024-10-29 at 15.01.41.jpeg')
+            img.setAttribute('src', 'imagens/pexels-joni-musi-391114634-31497416.jpg')
             //Adulto
         }else {
             //idoso
