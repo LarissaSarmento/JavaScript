@@ -14,11 +14,11 @@ function contar() {
         let p = Number(passo.value)
         if (p <= 0) {
             window.alert(`Passo inválido! Considerando PASSO 1`)
-            p - 1
+            p = 1
         }
         // Contagem crescente
         if(i < f) {
-            for(let c = 1; c <= f; c += p) {
+            for(let c = i; c <= f; c += p) {
                 res.innerHTML += `${c} \u{1F449}` // Emoji
             }
 
@@ -30,4 +30,4 @@ function contar() {
         }
         res.innerHTML += `\u{1F3C1}`
     }
-}
+} 
