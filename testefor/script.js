@@ -9,7 +9,10 @@ function numeros() {
         res.innerHTML= ''
         if(n % 2 == 0){
             for(n = 1; n <= 20; n++){
-                res.innerHTML += (` ${n}`)
+                if(n % 2 == 0){
+                    res.innerHTML += (` ${n}`)
+                }
+              
                } 
         }else {
             res.innerHTML = ('Número Ímpar')
