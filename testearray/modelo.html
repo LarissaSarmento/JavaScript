@@ -8,17 +8,38 @@
 </head>
 <body>
     <header>
-        <h1>NOMES DAS LETRAS E TAMANHO</h1>
+        <h1>Nomes das Letras e Tamanho</h1>
     </header>
     <section>
         <div id="resnomes"> Nomes das Frutas:::</div>
         <div id="resletras"> Quantidade de letras em cada nome:::</div>
-        <input type="button" value="Mostrar" onclick="array()">
-    </section>
 
+        <input type="button" value="Mostrar" onclick="array()">
+    </section><br>
+    <h1>Números, Soma, Pares</h1>
     <section>
-        <div id="num"></div>
+        
+        <div id="num">Números:: </div>
+        <div id="som">Soma:: </div>
+        <div id="par">Pares:: </div>
         <input type="button" value="Resultado" onclick="arrayy()">
+    </section> <br>
+
+    <h1>Calculadora </h1>
+    <section>
+       <div>
+           <p>Digite um número para Multiplicar <input type="number" name="num" id="calcnum">
+           <input type="button" value="Calcular" onclick="multiplicador()"></p>
+       </div>
+       <div>
+        <select name="tabuada" id="tabuada" size="10">
+            <option value="teste">Digite um numero acima</option>
+            <div id="mostrar"></div>
+        </select>
+        
+       </div>
+      
+       
     </section>
 
     <footer>
@@ -32,7 +53,11 @@
 <strong>SEGUNDO EXERCICIO</strong> - Crie um array com 5 números aleatórios.
 1 - Mostrar cada número no console <br>
 2 - Somar todos os números e, no final, exibir a soma total <br>
-3 - Verificação para mostrar quais números são pares
+3 - Verificação para mostrar quais números são pares <br>
+
+Calculadora
+1 - Digita um número
+2 - Usar esse numero para multiplicar e mostrar dentro de uma option
 
     <script src="script.js"></script>
 </body>
