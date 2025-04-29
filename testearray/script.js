@@ -58,7 +58,7 @@ function gerarTabuada(numero){
 
           mostrar.innerHTML = ''
      for(i = 1; i<= 10; i++){
-          mostrar.text += `${numero} x ${i} = ${numero * i}<br>`
+          mostrar.innerHTML += `${numero} x ${i} = ${numero * i}<br>`
      }
 }
 
