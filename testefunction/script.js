@@ -8,12 +8,39 @@
 // }
 
 
-function numero(numero){
-    return `Numero digitado = ${numero.value}`
+// function numero(numero){
+//     return `Numero digitado = ${numero.value}`
+// }
+
+// function mostrarNumero(){
+
+//     let numero = document.querySelector('#num').value
+//     document.querySelector('#res').innerHTML = numero(numero.value)
+// }
+
+let num = document.querySelector('#num')
+let res = document.querySelector('#res')
+
+
+function calculoNumero(valor){
+    return valor * valor
 }
 
-function mostrarNumero(){
-
-    let numero = document.querySelector('#num').value
-    document.querySelector('#res').innerHTML = numero(numero.value)
+function par(valor){
+    if ( valor%2 == 0){
+        window.alert('Numero Par')
+    }else{
+        window.alert('Numero Impar')
+    }
 }
+
+function usarONumero(){
+    let valor = Number(num.value)
+    if(valor == 0){
+        window.alert('Numero invalido')
+    }else{
+        res.innerHTML += `Resultado: ${calculoNumero(valor)}`
+        par(valor)
+    }
+}
+
