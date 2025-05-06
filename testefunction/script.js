@@ -18,6 +18,8 @@
 //     document.querySelector('#res').innerHTML = numero(numero.value)
 // }
 
+//------------------------------
+/*
 let num = document.querySelector('#num')
 let res = document.querySelector('#res')
 
@@ -43,4 +45,20 @@ function usarONumero(){
         par(valor)
     }
 }
+*/
 
+let nome = document.querySelector('#nome')
+let res = document.querySelector('#res')
+
+function usarNome(nome){
+     res.innerHTML = `O nome é ${nome}`
+}
+
+function mostrarNome(){
+    let valorDigitado = nomeInput.value
+    if(valorDigitado.trim() === ""){ // trim é para evitar nomes só com os espaços
+        window.alert("Digite um nome válido")
+    }else{
+        usarNome(valorDigitado)
+    }
+}

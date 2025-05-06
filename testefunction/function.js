@@ -1,6 +1,15 @@
+// function dizerOla(){
+//     console.log('Olá Larissa')
+// }
+// dizerOla()
+// dizerOla()
 
-let teste = function(numero){
-    return numero * numero
+//Função dizer olá sem precisar repetir manualmente
+function dizerOla(nome){
+    console.log(`Olá ${nome}`)
 }
+dizerOla('Larissa')
+dizerOla('nomeAleatorio')
+dizerOla('outroNome')
 
-var x  = console.log (teste(4))
+
