@@ -1,43 +1,39 @@
-let num = document.querySelector('#fnum')
-let flista = document.querySelector('#flista')
-let res = document.querySelector('#res')
-let vetor =  []
+ let num = document.querySelector('#fnum')
+ let lista = document.querySelector('#flista')
+ let res = document.querySelector('#res')
+ let valores = []
 
-function verificaNumero(n){
-    if(Number(n) >=1 && Number(n) <= 100){
-        return true
-    }else{
-        return false
-    }
-}
-
-function estaNalista(n, v){
-    if(v.indexOf(Number(n)) != -1){
-        return true
-    }else {
-        return false
-    }
-     
-}
-
+/*
 function adicionar(){
-    if (verificaNumero(num.value) && !estaNalista(num.value, vetor)){ 
-        vetor.push(Number(num.value))
-        let item = document.createElement('option')
-        item.text = `Valor ${num.value} adicionado`
-        flista.appendChild(item)
-        res.innerHTML = ''
+    let n = Number(num.value)
+    if(num.value === '' || n <=0 || n > 100){
+        window.alert('Numero invalido')
     }else{
-        window.alert('Valor inválido ou já encontrado na lista')
+        let item = document.createElement('option')
+        item.text = `Valor ${n} adicionado`
+        lista.appendChild(item)
+        valores.push(n)
     }
+}
+*/
 
+function adicionar() {
+    let n = Number(num.value)
+    if(num.value === '' || n <= 0 || n > 100){
+        window.alert('Numero invalido')
+    }else{
+       item = document.createElement('option') 
+       item.text = `Adicionado valor ${n}`
+       lista.appendChild(item)
+       valores.push(n)
+    }
     num.value = ''
     num.focus()
 }
 
-function finalizar(){
-    if(){
-        
-    }
-}
 
+function finalizar(){
+    res.innerHTML += `Valores adicionados = ${valores} `
+    lista.innerHTML = ''
+    valores = []
+}

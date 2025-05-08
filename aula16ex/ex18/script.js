@@ -21,7 +21,7 @@ function inLista(n, l){
 
 function adicionar(){
     if(isNumero(num.value) && !inLista(num.value, valores)){
-        valores.push(Number(num.value))
+        valores.push(Number(num.value)) // O push é uma função por isso os ()
         let item =  document.createElement('option')
         item.text = `Valor ${num.value} adicionado`
         lista.appendChild(item)
