@@ -78,13 +78,29 @@ function pegarValor(){
 
 
 function adicionar(n){
-    if(n == ''){
-        window.alert('Digite um nome')
+    if(n == '' || valores.includes(n)){
+        window.alert('Digite um nome ou nome já encontrado na lista')
     }else{
         let item = document.createElement('option')
         item.text = `${n}`
         lista.appendChild(item)
         valores.push(n)
+
+        num.value = ''
+        num.focus()
     }
-   
+
 }
+
+function finalizar(){
+
+    maior = valores[0]
+       for(pos in valores){
+           res.innerHTML += `${valores[pos]}<br>`
+           if(valores[pos] > maior)
+            maior = valores[pos]
+        }
+        res.innerHTML += `Quantidade de arrays ${valores.length}<br>`
+        res.innerHTML += `Maior array= ${maior}<br>`
+    }
+    
