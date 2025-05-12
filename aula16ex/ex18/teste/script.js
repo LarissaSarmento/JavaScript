@@ -17,40 +17,46 @@ function adicionar(){
 }
 */
 
-function adicionar() {
-    let n = Number(num.value)
-    if(num.value === '' || n <= 0 || n > 100){
-        window.alert('Numero invalido')
-    }else{
-       item = document.createElement('option') 
-       item.text = `Adicionado valor ${n}`
-       lista.appendChild(item)
-       valores.push(n)
-    }
-    num.value = ''
-    num.focus()
-}
+// function adicionar() {
+//     let n = Number(num.value)
+//     if(num.value === '' || n <= 0 || n > 100){
+//         window.alert('Numero invalido')
+//     }else{
+//        item = document.createElement('option') 
+//        item.text = `Adicionado valor ${n}`
+//        lista.appendChild(item)
+//        valores.push(n)
+//     }
+//     num.value = ''
+//     num.focus()
+// }
 
 
-function finalizar(){
+// function finalizar(){
     // res.innerHTML += `Valores adicionados = ${valores} `
     // lista.innerHTML = ''
     // valores = []
+
+    /*
     if(valores.length == 0){
         window.alert('Adicione um numero antes de seguir')
     }else{
-       let total = valores.length
-       let maior = valores[0]
-       let menor = valores[0]
+        let total = valores.length
+        soma = 0
+        media = 0
+        maior = valores[0]
+        menor = valores[0]
 
-    for(let pos in valores){
-        soma += valores[pos]
-        if(valores[pos] > maior)
-            maior = valores[pos]
-        if(valores[pos] < menor)
-            menor = valores[pos]
+        for(let pos in valores){
+            soma += valores[pos]
+            if(valores[pos] > maior)
+                maior = valores[pos]
+            if(valores[pos] < menor)
+                menor = valores[pos]
         }
-       media = soma / total
+
+        media = soma / total
+
 
      res.innerHTML = ''
      res.innerHTML += `${total}<br>`
@@ -60,4 +66,25 @@ function finalizar(){
      res.innerHTML += `${soma}`
 }
 
+} */
+
+
+// ---------------------------- Testando com Texto
+function pegarValor(){
+    let valor = num.value.trim()
+    adicionar(valor)
+}
+
+
+
+function adicionar(n){
+    if(n == ''){
+        window.alert('Digite um nome')
+    }else{
+        let item = document.createElement('option')
+        item.text = `${n}`
+        lista.appendChild(item)
+        valores.push(n)
+    }
+   
 }

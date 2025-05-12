@@ -35,16 +35,16 @@ function adicionar(){
 } 
 
 function finalizar(){
-    if(valores.length == 0){
+    if(valores.length == 0){ // Usa length porque é um array, se for valor de um input seria .value
         window.alert('Adicione valores antes de finalizar')
     }else{
-        let tot = valores.length
+        let tot = valores.length // Quantidade de indices
         let maior = valores[0]
         let menor = valores[0]
         let soma= 0
         let media = 0
         for(let pos in valores){ // é o mesmo que for(let i = 0; i < valores.length; i++)
-            soma += valores[pos]
+            soma += valores[pos] // Soma quantidade dos valores digitados
             if (valores[pos] > maior)
                 maior = valores[pos]
             if (valores[pos] < menor)
