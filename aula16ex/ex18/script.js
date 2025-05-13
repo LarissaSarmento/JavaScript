@@ -11,8 +11,8 @@ function isNumero(n){
     }
 }
 
-function inLista(n, l){
-    if (l.indexOf(Number(n)) != -1){
+function inLista(n, l){ // Verifica se o valor de n está na lista, porque se ele não está retorna -1
+    if (l.indexOf(Number(n)) != -1){ //indexOf busca o valor dentro do array e retorna a chave onde ele se encontra
         return true
     }else {
         return false
@@ -20,8 +20,8 @@ function inLista(n, l){
 }   
 
 function adicionar(){
-    if(isNumero(num.value) && !inLista(num.value, valores)){
-        valores.push(Number(num.value)) // O push é uma função por isso os ()
+    if(isNumero(num.value) && !inLista(num.value, valores)){ // islista se não estiver, o sistema adiciona na lista, se não apresenta mensagem
+        valores.push(Number(num.value)) // O push é uma função por isso os (), adiciona valor no array
         let item =  document.createElement('option')
         item.text = `Valor ${num.value} adicionado`
         lista.appendChild(item)

@@ -3,41 +3,42 @@
  let res = document.querySelector('#res')
  let valores = []
 
-/*
-function adicionar(){
-    let n = Number(num.value)
-    if(num.value === '' || n <=0 || n > 100){
-        window.alert('Numero invalido')
+function isNumero(n){
+    if(Number(n) >= 1 && Number(n) <= 100){
+        return true
     }else{
-        let item = document.createElement('option')
-        item.text = `Valor ${n} adicionado`
-        lista.appendChild(item)
-        valores.push(n)
+        return false
     }
 }
-*/
 
-// function adicionar() {
-//     let n = Number(num.value)
-//     if(num.value === '' || n <= 0 || n > 100){
-//         window.alert('Numero invalido')
-//     }else{
-//        item = document.createElement('option') 
-//        item.text = `Adicionado valor ${n}`
-//        lista.appendChild(item)
-//        valores.push(n)
-//     }
-//     num.value = ''
-//     num.focus()
-// }
+function isLista(n, l){
+    if(l.indexOf(Number(n)) != -1){
+        return true
+    }else{
+        return false
+    }
+}
+
+function adicionar() {
+    if(isNumero(num.value) && !isLista(num.value, valores)){
+        valores.push(Number(num.value))
+        item = document.createElement('option') 
+       item.text = `Adicionado valor ${num.value}`
+       lista.appendChild(item)
+    }else{
+       window.alert('Insira valor válido')
+    }
+    num.value = ''
+    num.focus()
+}
 
 
-// function finalizar(){
+function finalizar(){
     // res.innerHTML += `Valores adicionados = ${valores} `
     // lista.innerHTML = ''
     // valores = []
 
-    /*
+    
     if(valores.length == 0){
         window.alert('Adicione um numero antes de seguir')
     }else{
@@ -66,11 +67,11 @@ function adicionar(){
      res.innerHTML += `${soma}`
 }
 
-} */
+} 
 
 
 // ---------------------------- Testando com Texto
-function pegarValor(){
+/*function pegarValor(){
     let valor = num.value.trim()
     adicionar(valor)
 }
@@ -78,7 +79,7 @@ function pegarValor(){
 
 
 function adicionar(n){
-    if(n == '' || valores.includes(n)){
+    if(n == '' || valores.includes(n)){ // valores.includes verifica se o nome está dentro do array
         window.alert('Digite um nome ou nome já encontrado na lista')
     }else{
         let item = document.createElement('option')
@@ -103,4 +104,4 @@ function finalizar(){
         res.innerHTML += `Quantidade de arrays ${valores.length}<br>`
         res.innerHTML += `Maior array= ${maior}<br>`
     }
-    
+    */
