@@ -3,7 +3,7 @@
  let res = document.querySelector('#res')
  let valores = []
 
-function isNumero(n){
+/*function isNumero(n){
     if(Number(n) >= 1 && Number(n) <= 100){
         return true
     }else{
@@ -68,29 +68,35 @@ function finalizar(){
 }
 
 } 
-
+*/
 
 // ---------------------------- Testando com Texto
-/*function pegarValor(){
+function pegarValor(){
     let valor = num.value.trim()
     adicionar(valor)
 }
 
+function islista(nome,l){
+    if(l.indexOf(nome) != -1){
+        return true
+    }else{
+        return false
+    }
+}
 
 
 function adicionar(n){
-    if(n == '' || valores.includes(n)){ // valores.includes verifica se o nome está dentro do array
-        window.alert('Digite um nome ou nome já encontrado na lista')
-    }else{
+    if(n != '' && !islista(n, valores)){ // valores.includes verifica se o nome está dentro do array
+         valores.push(n)
         let item = document.createElement('option')
         item.text = `${n}`
         lista.appendChild(item)
-        valores.push(n)
 
-        num.value = ''
-        num.focus()
+    }else{
+         window.alert('Digite um nome ou nome já encontrado na lista')
     }
-
+      num.value = ''
+      num.focus()
 }
 
 function finalizar(){
@@ -104,4 +110,3 @@ function finalizar(){
         res.innerHTML += `Quantidade de arrays ${valores.length}<br>`
         res.innerHTML += `Maior array= ${maior}<br>`
     }
-    */
