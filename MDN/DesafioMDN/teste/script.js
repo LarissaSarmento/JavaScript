@@ -2,23 +2,46 @@ let num = document.querySelector('#num')
 let res = document.querySelector('#res')
 let botao = document.querySelector('#botao')
 let lista = document.querySelector('#lista')
+let resumo = document.querySelector('#resumo')
 
-function imparOuPar(){
-    var n = Number(num.value)
-    let item = document.createElement('option')
-    item.textContent = ''
-    lista.appendChild(item)
-    lista.style.size = '10px'
-    if(n <= 0){
-        window.alert('Digite um número válido')
-    }else if (n % 2 == 0){
-        lista.textContent = ('Numero par')
+let valores = []
+
+
+function repetirNumero(l, nn){
+    if(l.indexOf(Number(num.value)) != -1){
+        return true
     }else{
-        lista.textContent = ('Número ímpar')
-    }   
-
-    num.focus()
-    num.value = ''
+        return false
+    }
 }
 
- botao.addEventListener('click', imparOuPar)
+function imparOuPar(){
+    var n = Number(num.value)   
+
+    let item = document.createElement('option')
+
+    if(n <= 0 && repetirNumero(valores, n)){
+        window.alert('Número inválido ou já está na lista')
+
+    }else{
+        valores.push(n)
+
+    } if (n % 2 == 0){
+        item.innerHTML += (`Numero ${n} par`)
+    }else{
+        item.innerHTML += (`Número ${n} ímpar`)
+    } 
+    lista.appendChild(item)
+
+    
+
+    num.focus()
+    num.value = '' 
+}
+
+
+ botao.addEventListener('click', imparOuPar) 
+
+function resultado(){
+
+}
