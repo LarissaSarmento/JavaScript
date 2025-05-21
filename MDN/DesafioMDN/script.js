@@ -17,7 +17,7 @@ function conferirPalpite(){
     palpites.textContent = 'Palpites anteriores: '
 }
 
-    palpites.textContent += palpiteUsuario + " "
+    palpites.textContent += palpiteUsuario + " " // Aqui vai apresentar o texto + o que o usuário digitou e as " " são para dar espaço uma da outra
 
     if (palpiteUsuario === numeroAleatorio){
         ultimoResultado.textContent = "Parabéns! Você acertou!"
