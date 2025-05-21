@@ -70,7 +70,7 @@ function conferirPalpite(){
         campoPalpite.focus()
 
         ultimoResultado.style.backgroundColor = 'white'
-
+ 
         numeroAleatorio = Math.floor(Math.random() * 100) + 1
 
     } 
