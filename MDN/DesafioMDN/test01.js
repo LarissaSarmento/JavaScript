@@ -67,5 +67,5 @@ envioPalpite.addEventListener('click', conferirPalpite)
 
         campoPalpite.desabled = false
         envioPalpite.desabled = false
-
+        
     }
