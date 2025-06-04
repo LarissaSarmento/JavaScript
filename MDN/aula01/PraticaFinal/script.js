@@ -1,6 +1,6 @@
 // 1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS
 let customName = document.querySelector('#customname')
-let randomize = document.querySelector('#randomize')
+let randomize = document.querySelector('.randomize')
 let story = document.querySelector('.story')
 
 function randomValueFromArray(array){
@@ -28,28 +28,33 @@ let insertZ = ['spontaneously combusted',
 
 randomize.addEventListener('click', result)
 
+
 function result(){
+    let newStory = storyText
     if (customName.value !== ''){
         const name = customName.value
         newStory =  newStory.replace('Bob', name)
     }
 
     if(document.getElementById('uk').checked){
-        const weight = Math.round(300)
-        const temperature = Math.round(94)
+        const weight = Math.round(300 / 14) + ' stone'
+        const temperature = Math.round((94 - 32) * 5 / 9) + ' centigrade'
+       newStory = newStory.replace('300 pounds', weight)
+       newStory = newStory.replace('94 fahrenheit', temperature)
     }
 
-    let newStory = storyText
-    let xItem = randomValueFromArray
-    let yItem = randomValueFromArray
-    let zItem = randomValueFromArray
+    
+    let xItem = randomValueFromArray(insertX)
+    let yItem = randomValueFromArray(insertY)
+    let zItem = randomValueFromArray(insertZ)
 
-    let x = newStory.replace(':insertx:', xItem)
-    let y = newStory.replace(':inserty:', yitem)
-    let z = newStory.replace(':insertz:', zitem)
+    newStory= newStory.replace(':insertx:', xItem)
+    newStory= newStory.replace(':insertx:', xItem)
+    newStory = newStory.replace(':inserty:', yItem)
+    newStory = newStory.replace(':insertz:', zItem)
 
-    console.log(x)
+    // console.log()
 
-    story.textContent = 
-    story.computedStyleMap.visibility = 'visible'
+    story.textContent = newStory
+    story.style.visibility = 'visible'
 }
