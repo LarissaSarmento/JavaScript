@@ -1,30 +1,27 @@
-const { createElement } = require("react")
-
 let select = document.querySelector('select')
-let ul = document.querySelector('ul')
+let list = document.querySelector('ul')
 let h1 = document.querySelector('h1')
 
+
 select.addEventListener('change', function(){
-  let choice = select.value
-  let dia = 31
-  if(choice === 'February'){
-    dia = 28
-  } else if(choice === 'April' ||
-     choice === 'June' ||
-    choice ==='September' ||
-  choice === 'November'){
-    dia = 30
+  let escolha = select.value
+  let dia = 24
+  if(escolha === 'Sabado' || 'Domingo'){
+    dia = 10
+  }else if(escolha === 'Segunda' || escolha === 'Terça'||
+    escolha === 'Quarta' || escolha === 'Quinta' || escolha === 'Sexta'
+  ){
+    dia = 6
   }
 
-  createCalendar(choice, dia)
+  apresentarDias(dia, escolha)
 })
 
-
-function createCalendar(choice, dia){
-  h1.textContent = choice
-  for(let i = 1; i <= dia; i++){
-    let liDia = document.createElement('li')
-    liDia.textContent = i
-    ul.appendChild(liDia)
+function apresentarDias(dia, escolha){
+  h1.textContent = escolha
+  for(let i = dia; i <= dia; i++){
+    let li = document.createElement('li')
+    list.textContent = i
+    ul.appendChild(li)
   }
 }
