@@ -4,8 +4,14 @@ var h1 = document.querySelector('h1');
 
 select.onchange = function() {
   var choice = select.value;
-
-  // ADD CONDITIONAL HERE
+  let days = 31
+  if(choice === 'February'){
+    days = 28
+  }else if(choice === 'April' || choice ==='June' || choice === 'September'
+    || choice === 'November'){
+      days = 30
+    }
+ 
 
   createCalendar(days, choice);
 }
