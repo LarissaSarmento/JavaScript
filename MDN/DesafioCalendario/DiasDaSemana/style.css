@@ -17,3 +17,26 @@
     color: white;
   }
   
+  #modal {
+    display: none;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgb(134, 134, 134);
+    z-index: 10;
+  }
+
+  #informacoesSalvas{
+    margin-top: 20px;
+  }
+
+  #overlay{
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 5;
+  }

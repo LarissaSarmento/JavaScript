@@ -18,12 +18,23 @@
           <option value="Sexta">Sexta</option>
           <option value="Sabado">Sabado</option>
           <option value="Domingo">Domingo</option>
-      
-        <h1></h1>
+        </select>
+        <h1 id="ih1"></h1>
 
-        <ul></ul>
+        <ul id="ulLista"></ul>
       </div>
       
-      <hr />      
+      <hr />     
+      
+      
+      <div id="modal">
+        <p>Digite informações para o dia <span id="modalDia"></span>:</p>
+        <input type="text" name="inputInfo" id="inputInfo">
+        <button id="salvarBtn">Salvar</button>
+        <button id="fecharBtn">Cancelar</button>
+      </div>
+
+      <div id="informacoesSalvas"></div>
+      <div id="overlay"></div>
 </body>
 </html>
