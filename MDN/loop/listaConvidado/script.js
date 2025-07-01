@@ -7,13 +7,13 @@ admitted.textContent = 'Admit: '
 refused.textContent = 'Refused: '
 
 for(let i = 0; i < people.length; i++){
-    if(people === 'Phil' && people === 'Lola'){
-        let remover = people.splice(4,6)
-        refused.textContent += remover + ','
+    if(people[i] === 'Phil' || people[i] === 'Lola'){
+        refused.textContent += people[i] + ', '
     } else{
-        admitted.textContent +=  people[i] + ','
+         admitted.textContent += people[i] + ', '
     }
+   
 }
 
-
-
+   refused.textContent = refused.textContent.slice(0, refused.textContent.length-2) + '.'
+   admitted.textContent = admitted.textContent.slice(0, admitted.textContent.length-2) + '.'
