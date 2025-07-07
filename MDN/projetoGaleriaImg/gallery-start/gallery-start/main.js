@@ -1,5 +1,5 @@
-const displayedImage = document.querySelector('.displayed-img');
-const thumbBar = document.querySelector('.thumb-bar');
+const igmIndividual = document.querySelector('.individual-img');
+const imgGrande = document.querySelector('.imagemGrande');
 
 const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
@@ -10,9 +10,13 @@ const overlay = document.querySelector('.overlay');
 
 /* Looping through images */
 
-const newImage = document.createElement('img');
-newImage.setAttribute('src', xxx);
-newImage.setAttribute('alt', xxx);
-thumbBar.appendChild(newImage);
+for(let i = 0; i <= novaImagem; i++){
+    const novaImage = document.createElement('img');
+ novaImage.setAttribute('src', xxx);
+ novaImage.setAttribute('alt', xxx);
+ imgGrande.appendChild(novaImage);
+}
 
+
+function 
 /* Wiring up the Darken/Lighten button */
