@@ -1,0 +1,28 @@
+h1 {
+  font-family: helvetica, arial, sans-serif;
+  text-align: center;
+}
+
+
+
+button {
+  border: 0;
+  background: rgba(150,150,150,0.6);
+  text-shadow: 1px 1px 1px white;
+  border: 1px solid #999;
+  position: absolute;
+  cursor: pointer;
+  
+} 
+
+p {
+  width: auto;
+}
+
+.res {
+  margin-top: 50px;
+}
+
+#iimg {
+  display: none;
+}

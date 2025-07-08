@@ -15,8 +15,13 @@ for(let i = 0; i <= novaImagem; i++){
  novaImage.setAttribute('src', xxx);
  novaImage.setAttribute('alt', xxx);
  imgGrande.appendChild(novaImage);
+ novaImage.addEventListener('click', (e)=>{
+    
+ })
 }
 
 
-function 
+function parametroPara(){
+
+}
 /* Wiring up the Darken/Lighten button */
