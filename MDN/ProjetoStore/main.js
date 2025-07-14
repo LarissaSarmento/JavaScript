@@ -8,17 +8,16 @@ produtos.forEach(prod =>{
     div.innerHTML = `<img src="${prod.imagem}">
     <h3>${prod.nome}<h3>
     <p>R$ ${prod.preco}</p>
-    <button id="adicionar">Adicionar ao Carrinho</button>`
+    <button id="adicionar" data-preco="${prod.preco}">Adicionar ao Carrinho</button>`
 
-    document.body.appendChild(div)
+    document.querySelector('#produtos').appendChild(div)
 })
 
-let carrinho = document.querySelector('#carrinho')
-let adicionar = document.querySelectorAll('#adicionar')
+let botoes = document.querySelectorAll('#adicionar')
 let res = document.querySelector('#res')
 let total = 0
 
-adicionar.forEach(botao =>{
+botoes.forEach(botao =>{
     botao.addEventListener('click', (e) =>{
         let preco = parseFloat(e.target.dataset.preco)
         total += preco
@@ -27,9 +26,23 @@ adicionar.forEach(botao =>{
 })
 
 
+const carrinho = document.querySelector('#carrinho')
+const modal = document.querySelector('#modal')
+const fechar = document.querySelector('#fechar-modal')
+const hidden = document.querySelector('.hidden')
+
+carrinho.addEventListener('click', ()=>{
+    modal.classList.remove(hidden)
+})
+
+fechar.addEventListener('click', () =>{
+    modal.classList.add(hidden)
+})
+
 // function adicionar(){
 //     if()
 // }
 
 // carrinho.addEventListener('click', ()=>{
 // })
+
