@@ -11,7 +11,7 @@ h1{
 
 img{
   width: 200px;
-  border: 2px solid rgb(189, 188, 188);
+  /* border: 2px solid rgb(189, 188, 188); */
   border-radius: 1px;
 }
 
@@ -40,6 +40,7 @@ img{
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  display: none;
 }
 
 .modal-content {

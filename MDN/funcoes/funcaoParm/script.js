@@ -32,5 +32,4 @@ if (msgType === 'warning'){
 }else {
   msg.style.paddingLeft = '20px'
 }
-
 }
