@@ -1,10 +1,10 @@
-const produtos = [{nome: 'CanecaPinkFloyd', preco: 200.00, imagem: 'image/canecaPinkFloyd.webp'},
-    {nome:'CamisaPinkFloyd', preco: 500.00, imagem: 'image/camisaPinkFloyd.webp'}
+const produtos = [{nome: 'Caneca PinkFloyd', preco: 200.00, imagem: 'image/canecaPinkFloyd.webp'},
+    {nome:'Camisa PinkFloyd', preco: 500.00, imagem: 'image/camisaPinkFloyd.webp'}
 ]
 
 produtos.forEach(prod =>{
     const div = document.createElement('div')
-    div.className = 'produto'
+    div.classList.add('produto') //
 
     div.dataset.nome = prod.nome
     div.dataset.preco = prod.preco
@@ -18,21 +18,24 @@ produtos.forEach(prod =>{
 })
 
 let res = document.querySelector('#res')
+let tot = document.querySelector('#total')
+let total = 0 // O total é passado fora do clique para o total já começar com zero, se não vai começar dentro como zero e somar zero + produto, sempre vai dar o valor do produto sem acumular.
 document.querySelector('#produtos').addEventListener('click', (e) =>{
     const produto = e.target.closest('.produto')
     if(!produto) return
 
     const nome = produto.dataset.nome
-    const preco = parseFloat(produto.dataset.preco)
+    const precoItem = parseFloat(produto.dataset.preco)
+    total += precoItem
 
-    res.textContent= `Produto selecionado :${nome} - R$ ${preco.toFixed(2)}`
+    res.innerHTML += `Produto selecionado: ${nome} - R$ ${precoItem.toFixed(2)} <br>`
+    tot.innerHTML = `<br> Total: ${total.toFixed(2)}`
 })
-
 
 const carrinho = document.querySelector('#carrinho')
 const modal = document.querySelector('#modal')
 const fechar = document.querySelector('#fechar-modal')
-const hidden = document.querySelector('.hidden')
+// const hidden = document.querySelector('.hidden')
 
 carrinho.addEventListener('click', ()=>{
     modal.style.display = 'flex'
@@ -42,6 +45,13 @@ fechar.addEventListener('click', () =>{
     modal.style.display = 'none'
 })
 
+if(!modal=== 0){
+    let limparCarrinho = document.createElement('button')
+    limparCarrinho.setAttribute('id', 'limparCar')
+    limparCarrinho.textContent = 'Limpar'
+    limparCarrinho.style.display = 'inline'
+    modal.appendChild(limparCarrinho)
+}
 
 
 // let botoes = document.querySelectorAll('#adicionar')

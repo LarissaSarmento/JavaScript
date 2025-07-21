@@ -7,6 +7,7 @@ h1{
   display: inline;
   border: 1px solid rgb(189, 188, 188);
   border-radius: 1px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 img{
