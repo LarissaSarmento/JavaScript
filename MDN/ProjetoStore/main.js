@@ -20,9 +20,13 @@ produtos.forEach(prod =>{
 let res = document.querySelector('#res')
 let tot = document.querySelector('#total')
 let total = 0 // O total é passado fora do clique para o total já começar com zero, se não vai começar dentro como zero e somar zero + produto, sempre vai dar o valor do produto sem acumular.
+
+// Soma no carrinho
 document.querySelector('#produtos').addEventListener('click', (e) =>{
     const produto = e.target.closest('.produto')
     if(!produto) return
+
+    msgAlert('Produto adicionado ao carrinho!')
 
     const nome = produto.dataset.nome
     const precoItem = parseFloat(produto.dataset.preco)
@@ -32,6 +36,7 @@ document.querySelector('#produtos').addEventListener('click', (e) =>{
     tot.innerHTML = `<br> Total: ${total.toFixed(2)}`
 })
 
+// abrir carrinho e fechar
 const carrinho = document.querySelector('#carrinho')
 const modal = document.querySelector('#modal')
 const fechar = document.querySelector('#fechar-modal')
@@ -45,13 +50,26 @@ fechar.addEventListener('click', () =>{
     modal.style.display = 'none'
 })
 
-if(!modal=== 0){
+const modalContent = document.querySelector('.modal-content')
+
     let limparCarrinho = document.createElement('button')
     limparCarrinho.setAttribute('id', 'limparCar')
-    limparCarrinho.textContent = 'Limpar'
-    limparCarrinho.style.display = 'inline'
-    modal.appendChild(limparCarrinho)
-}
+    limparCarrinho.innerHTML = 'Limpar'
+    limparCarrinho.style.display = 'flex'
+    limparCarrinho.style.marginTop = '10px'
+    modalContent.appendChild(limparCarrinho)
+
+    limparCarrinho.addEventListener('click', ()=>{
+        msgAlert('Carrinho limpo!')
+        res.textContent = ''
+        tot.textContent = ''
+        total = 0
+    })
+
+
+    function msgAlert(msg){
+        window.alert(msg)
+    }
 
 
 // let botoes = document.querySelectorAll('#adicionar')
