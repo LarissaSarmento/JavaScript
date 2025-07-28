@@ -26,7 +26,6 @@ document.querySelector('#produtos').addEventListener('click', (e) =>{
     const produto = e.target.closest('.produto')
     if(!produto) return
 
-    msgAlert('Produto adicionado ao carrinho!')
 
     const nome = produto.dataset.nome
     const precoItem = parseFloat(produto.dataset.preco)
@@ -60,16 +59,20 @@ const modalContent = document.querySelector('.modal-content')
     modalContent.appendChild(limparCarrinho)
 
     limparCarrinho.addEventListener('click', ()=>{
-        msgAlert('Carrinho limpo!')
         res.textContent = ''
         tot.textContent = ''
         total = 0
     })
 
 
-    function msgAlert(msg){
-        window.alert(msg)
-    }
+   function adicionarCarrinho(car){
+    let adc = adc.addEventListener('click', ()=>{
+        for(let i = 0; i <= car.style; i++){
+            
+        }
+    })
+    
+   }
 
 
 // let botoes = document.querySelectorAll('#adicionar')

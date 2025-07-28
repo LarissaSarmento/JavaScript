@@ -1,0 +1,16 @@
+h1 {
+  font-family: helvetica, arial, sans-serif;
+  text-align: center;
+}
+
+body {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.miniatura-img img{
+  display: block;
+  width: 20%;
+  float: left;
+  cursor: pointer;
+}
