@@ -1,0 +1,14 @@
+h1 {
+  font-family: helvetica, arial, sans-serif;
+  text-align: center;
+}
+
+.res{
+  margin: auto;
+}
+
+#imgAqui img{
+  display: inline-block;
+  width: 20%;
+  cursor: pointer;
+}

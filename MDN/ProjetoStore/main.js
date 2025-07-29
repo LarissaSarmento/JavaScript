@@ -22,8 +22,12 @@ let tot = document.querySelector('#total')
 let total = 0 // O total é passado fora do clique para o total já começar com zero, se não vai começar dentro como zero e somar zero + produto, sempre vai dar o valor do produto sem acumular.
 
 // Soma no carrinho
+// document.querySelector('#produtos').addEventListener('click', (e) =>{
+//     const produto = e.target.closest('.produto')
+//     if(!produto) return
+
 document.querySelector('#produtos').addEventListener('click', (e) =>{
-    const produto = e.target.closest('.produto')
+    const produto = e.target.addCar
     if(!produto) return
 
 
