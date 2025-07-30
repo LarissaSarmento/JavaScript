@@ -1,7 +1,9 @@
 let res = document.querySelector('#res')
 let imgAqui = document.querySelector('#imgAqui')
 let imgGrande = document.querySelector('#imgGrande')
+let btn = document.querySelector('button')
 
+let sobreposicao = document.querySelector('.sobreposicao')
 let vogais = ['a', 'e', 'i', 'o', 'u']
 
 
@@ -22,8 +24,19 @@ for(let image of images) {
     imgAqui.appendChild(criar)
 
     criar.addEventListener('click', e=>{
-        imgGrande.src = e.target.src // onde está o caminho da imagem grande, altera para o caminho da imagem que foi clicado.
-        
+        imgGrande.src = e.target.src // onde está o caminho da imagem grande, altera para o caminho da imagem que foi clicado.       
     })
 }
 
+btn.addEventListener('click', ()=>{
+    let btnClass = btn.getAttribute('class')
+    if(btnClass === 'dark'){
+        btn.setAttribute('class', 'claro')
+        btn.textContent = `Clarear`
+        sobreposicao.style.backgroundColor = 'black'
+    }else{
+        btn.setAttribute('class', 'black')
+        btn.textContent = `Dark`
+        sobreposicao.style.backgroundColor = 'white'
+    }
+})
