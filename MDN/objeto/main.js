@@ -1,5 +1,8 @@
 let pessoa = {
-    nome: ['Bob', 'Smith'],
+    nome: {
+        primeiro:'Bob', 
+        segundo: 'Smith'
+    },
     idade: 32,
     sexo: 'masculino',
     interesse: ['musica', 'esquiar'],
@@ -21,3 +24,7 @@ let pessoa = {
         alert('Oi! eu sou' + this.nome[0] + '.')
     }
 }
+
+let myDataName = 'altura'
+let myDataValue = '1.75m'
+pessoa[myDataName] = myDataValue
