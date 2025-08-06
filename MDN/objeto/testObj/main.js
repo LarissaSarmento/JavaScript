@@ -43,28 +43,48 @@ const cat = {
 ////////// Toda essa parte de cima resumida aqui
 
 class Cat {
-    constructor(name, breed, color){
-        this.name = name
-        this.breed = breed
-        this.color = color
-    }
-    greeting(){
-        console.log(`Hello, said ${this.name} the ${this.breed}.`)
-    }
+ constructor(name, breed, color){
+  this.name = name
+  this.breed = breed
+  this.color = color
+ } 
+
+ greeting(){
+return (`Hello, said ${this.name} the ${this.breed}. `)
+ }
 }
 
-const cat = new Cat('Bertie', 'Cymric', 'white')
-const cat2 = new Cat('Elfie', 'Aphorodite Giant', 'ginger')
+ const cat = new Cat('Gato1', 'marca1', 'cor1')
+ const cat2 = new Cat('Gato2', 'marca2', 'cor2')
 
+//  console.log(cat2.greeting())
 
   const section = document.querySelector("section");
   let para1 = document.createElement("p");
   let para2 = document.createElement("p");
-//   para1.textContent = `The cat's name is ${catName}.`;
-  para2.textContent = `The cat's color is ${cat.greeting()}.`;
+  // para1.textContent = `The cat's name is ${cat.greeting()}`;
+  // para2.textContent = `The cat's color is ${cat2.greeting()}`;
   section.appendChild(para1);
   section.appendChild(para2);
+
+
+ class prod {
+  constructor(nome, marca, preço){
+    this.nome = nome
+    this.marca = marca
+    this.preço = preço  
+ } 
+
+ apresentarProd(){
+  para1.innerHTML = `<h1>${this.nome}</h1><br>
+  <h2>${this.marca}</h2><br>
+  <h3>${this.preço}</h3>`
+ }
+}
   
+const prod1 = new prod('Camisa Pink FLoyd', 'Over', '800.00')
+
+console.log(prod1.apresentarProd())
 // OBJETO 02 /////////////////////////
 
 // const band = {
