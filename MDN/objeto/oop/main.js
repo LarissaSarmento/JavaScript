@@ -39,23 +39,22 @@ let person2 = new Person('Sarah')
 
 // Abaixo farei o mesmo que está acima, porém com mais dados
 
-function Person(first, last, age, gender, interests){
-    this.name = {
-        'first': first,
-        'last': last
+
+function Person(primeiroNome, segundoNome, idade, musicaFavorita, estudo){
+    this.nome = {
+        primeiroNome: primeiroNome,
+        segundoNome: segundoNome
     }
-    this.age = age
-    this.gender = gender
-    this.interests = interests
+    this.idade = idade
+    this.estudo = estudo
+    this.musicaFavorita = musicaFavorita
+    this.estudo = estudo
+    this.frase = function () {
+        alert('Amar a si mesmo é conhecer o mundo!')
+    }
     this.bio = function(){
-        alert(this.name.first + ' ' + this.name.lest + 'is' + this.age + 
-           'years old. He likes ' + this.interests[0] + 'and ' + this.interests[1] + 
-        '.')
+        alert(this.nome.primeiroNome + ' ' + this.nome.segundoNome + 'com idade: ' + this.idade + 'musica favorita ' + this.musicaFavorita)
     }
 }
 
-    this.greeting = function(){
-        alert('Hi! I\'m' + this.name.first + '.')
-    }
-
-    let person1 = new Person('Bob', 'Smith', '32', 'male', ['music', 'skiing'])
+let pessoa1 = new Person('Larissa', 'Sarmento', 24, 'Conform Numb', ['JS', 'TypeScript'])
