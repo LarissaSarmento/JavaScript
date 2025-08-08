@@ -40,7 +40,7 @@ let person2 = new Person('Sarah')
 // Abaixo farei o mesmo que está acima, porém com mais dados
 
 
-function Person(primeiroNome, segundoNome, idade, musicaFavorita, estudo){
+function Person1(primeiroNome, segundoNome, idade, musicaFavorita, estudo){
     this.nome = {
         primeiroNome: primeiroNome,
         segundoNome: segundoNome
@@ -57,4 +57,62 @@ function Person(primeiroNome, segundoNome, idade, musicaFavorita, estudo){
     }
 }
 
-let pessoa1 = new Person('Larissa', 'Sarmento', 24, 'Conform Numb', ['JS', 'TypeScript'])
+let pessoa1 = new Person1('Larissa', 'Sarmento', 24, 'Confortably Numb', ['JS', 'TypeScript'])
+
+
+// ---------------
+function Person(first, last, age, gender, interests){
+    this.name = {
+        'first': first,
+        'last': last
+    }
+    this.age = age
+    this.gender = gender
+    this.interests = interests
+    this.bio = function(){
+// Primeiro defina uma string e torne-a igual à parte
+// da biografia que sabemos que será sempre a mesma.
+        let string= this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. '
+// define uma variável que conterá a parte pronominal de
+// a segunda frase
+        let pronoun
+
+        if(this.gender === 'male' || this.gender === 'Male' || this.gender === 'm' || this.gender === 'M'){
+            pronoun = 'He likes'
+        } else if(this.gender === 'famale' || this.gender === 'Famale' || this.gender === 'f' || this.gender === 'F'){
+            pronoun = 'She likes'
+        } else{
+            pronoun = 'They like'
+        }
+// adicione a sequência de pronomes on ao final da sequência principal
+        string += pronoun
+// use outra condicional para estruturar a última parte da
+// segunda frase, dependendo se o número de interesses
+// é 1, 2 ou 3
+
+        if(this.interests.lenght === 1){
+            string += this.interests[0] + '.'
+        } else if(this.interests.lenght === 2){
+            string += this.interests[0] + ' and ' + this.interests[1] + '.'
+        }else{  
+// se houver mais de 2 interesses, fazemos um loop por eles
+// todos, adicionando cada um à string principal seguido por uma vírgula,
+// exceto o último, que precisa de um and e um ponto final 
+            for(let i =0; i < this.interests.length; i++){
+                if(i === this.interests.length -1){
+                    string += 'and ' + this.interests[i] + '.'
+                }else {
+                    string += this.interests[i] + ', '
+                }
+            }
+        }
+// finalmente, com a string construída, nós a alertamos()
+        alert(string)
+    }
+
+    this.greeting = function(){
+        alert('Hi! I\'m' + this.name.first + '.')
+    }
+}
+
+let personEx = new Person('Tammi', 'Smith', 32, 'neutral', ['music', 'skiing', 'kickboxing'])
