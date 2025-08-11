@@ -115,4 +115,4 @@ function Person(first, last, age, gender, interests){
     }
 }
 
-let personEx = new Person('Tammi', 'Smith', 32, 'neutral', ['music', 'skiing', 'kickboxing'])
+let personEx = new Person('Tammi', 'Smith', 32, 'm', ['music', 'skiing', 'kickboxing'])
