@@ -98,7 +98,7 @@ function Person(first, last, age, gender, interests){
 // se houver mais de 2 interesses, fazemos um loop por eles
 // todos, adicionando cada um à string principal seguido por uma vírgula,
 // exceto o último, que precisa de um and e um ponto final 
-            for(let i =0; i < this.interests.length; i++){
+            for(let i = 0; i < this.interests.length; i++){
                 if(i === this.interests.length -1){
                     string += 'and ' + this.interests[i] + '.'
                 }else {
@@ -116,3 +116,10 @@ function Person(first, last, age, gender, interests){
 }
 
 let personEx = new Person('Tammi', 'Smith', 32, 'm', ['music', 'skiing', 'kickboxing'])
+
+
+/*
+"Uma classe (ou função construtora) é um molde que define propriedades e métodos.
+Ao usar new, você cria instâncias (objetos) que herdam métodos do protótipo e têm suas próprias propriedades."
+
+*/

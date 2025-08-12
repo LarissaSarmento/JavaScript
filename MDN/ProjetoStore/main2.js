@@ -1,9 +1,10 @@
 
-
 class prod{
-    constructor(nome, preco, adCarrinho){ // Só passo no construtor os métodos que sempre precisarão criar um novo
+    constructor(nome, preco, img, adCarrinho){ // Só passo no construtor os métodos que sempre precisarão criar um novo
     this.nome = nome
     this.preco = preco
+    this.img = img
+    this.adCarrinho = adCarrinho
 }
 
         exibeNome() { // Na classe eu passo os métodos que serão repetidos ou seja não precisa criar novo toda vez
@@ -14,11 +15,25 @@ class prod{
         let nomeP = document.querySelector('.preco')
         nomeP.textContent = this.preco
     }
-
-        adCarrinho (){}
 }
 
-let prod1 = new prod('Caneca', '28.8')
-prod1.exibeNome()
-prod1.exibePreco()
-let prod2 = new prod('Camisa', '499.99')
+let produtos = [
+    new prod('Caneca', '299,90','./image/canecaPinkFloyd.webp'),
+    new prod('Camisa', '785,50', './image/camisaPinkFloyd.webp'),  
+]
+
+let container = document.querySelector('#produtos-container')
+produtos.forEach(p =>{
+
+   let localProdutos = document.createElement('div')
+
+   localProdutos.innerHTML= `
+   <img src="${p.img}" alt="${p.nome}">
+   <h2>${p.nome}<\h2>
+   <p>${p.preco}<\p>
+   <button>Adicionar Carrinho</button>
+   `
+   
+   container.appendChild(localProdutos)
+})
+

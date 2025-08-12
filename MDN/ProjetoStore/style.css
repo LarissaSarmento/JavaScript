@@ -3,7 +3,7 @@ h1{
   background-color: rgb(223, 223, 223);
 }
 
-.produto p{
+#produto{
   display: inline;
   border: 1px solid rgb(189, 188, 188);
   border-radius: 1px;
