@@ -117,9 +117,30 @@ function Person(first, last, age, gender, interests){
 
 let personEx = new Person('Tammi', 'Smith', 32, 'm', ['music', 'skiing', 'kickboxing'])
 
-
+Person.prototype.farewell =  function(){
+    alert(this.name.first + 'has left the building. Bye for now!')
+}
 /*
 "Uma classe (ou função construtora) é um molde que define propriedades e métodos.
 Ao usar new, você cria instâncias (objetos) que herdam métodos do protótipo e têm suas próprias propriedades."
 
 */
+
+
+function Teacher(first, last, age, gender, interests, subjects){
+    Person.call(this, first, last, age, gender, interests) // O call permite chamar uma função definida em outro lugar mas no contexto atual com parametro.
+
+    this.subject = subject
+}
+
+function Brick() {
+    this.width = 10
+    this.height = 20
+}
+
+function BLueGlasssBrick(){
+    Brick.call(this)
+
+    this.opacity = 0.5
+    this.color = 'blue'
+}
