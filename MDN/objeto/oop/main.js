@@ -69,7 +69,8 @@ function Person(first, last, age, gender, interests){
     this.age = age
     this.gender = gender
     this.interests = interests
-    this.bio = function(){
+}
+    Person.prototype.bio = function(){
 // Primeiro defina uma string e torne-a igual à parte
 // da biografia que sabemos que será sempre a mesma.
         let string= this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. '
@@ -110,16 +111,20 @@ function Person(first, last, age, gender, interests){
         alert(string)
     }
 
-    this.greeting = function(){
-        alert('Hi! I\'m' + this.name.first + '.')
-    }
-}
+    // this.greeting = function(){
+    //     alert('Hi! I\'m' + this.name.first + '.')
+    // }
 
-let personEx = new Person('Tammi', 'Smith', 32, 'm', ['music', 'skiing', 'kickboxing'])
+
+Person.prototype.greeting = function() {
+    alert('Hi! I\'m' + this.name.first)
+}
 
 Person.prototype.farewell =  function(){
     alert(this.name.first + 'has left the building. Bye for now!')
 }
+
+let personEx = new Person('Tammi', 'Smith', 32, 'm', ['music', 'skiing', 'kickboxing'])
 /*
 "Uma classe (ou função construtora) é um molde que define propriedades e métodos.
 Ao usar new, você cria instâncias (objetos) que herdam métodos do protótipo e têm suas próprias propriedades."
@@ -127,7 +132,7 @@ Ao usar new, você cria instâncias (objetos) que herdam métodos do protótipo 
 */
 
 
-function Teacher(first, last, age, gender, interests, subjects){
+function Teacher(first, last, age, gender, interests, subject){
     Person.call(this, first, last, age, gender, interests) // O call permite chamar uma função definida em outro lugar mas no contexto atual com parametro.
 
     this.subject = subject
@@ -138,9 +143,26 @@ function Brick() {
     this.height = 20
 }
 
-function BLueGlasssBrick(){
+function BlueGlasssBrick(){
     Brick.call(this)
 
     this.opacity = 0.5
     this.color = 'blue'
 }
+
+Object.defineProperties(Teacher.prototype, 'constructor', {
+    value: Teacher,
+    enumerable: false,
+    writable: true
+})
+
+/*
+-----Sobre HERANÇA------
+    Existe a classe de objeto pai, a partir dela eu faço tanto as instancias que são criadas com o new
+    As instancias acessam o protótipo do pai, ou seja não cria nada novo.
+
+    Existe a possibilidade de criar um filho que vai herdar as propriedades e metodos do pai. A diferença dele para a instancia é que melhor para ter independencia
+    se der algum erro no pai, não vai passar o bug para o filho, é como criar uma cópia.
+
+    Para criar um filho com as propriedades do pai, basta usar o call(this), já para usar os metodos(funções) é de uma forma diferente usando prototype
+*/
