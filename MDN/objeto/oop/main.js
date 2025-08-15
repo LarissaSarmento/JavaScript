@@ -150,11 +150,13 @@ function BlueGlasssBrick(){
     this.color = 'blue'
 }
 
-Object.defineProperties(Teacher.prototype, 'constructor', {
+Teacher.prototype = Object.create(Person.prototype)
+
+Object.defineProperty(Teacher.prototype, 'constructor', {
     value: Teacher,
     enumerable: false,
-    writable: true
-})
+    writable: true,
+}) // Usei essa parte para que o Teacher aponte para o Person, mas não faça referencia direta a ele, mas mostre como se fosse a copia e refenciando o Teacher
 
 /*
 -----Sobre HERANÇA------
