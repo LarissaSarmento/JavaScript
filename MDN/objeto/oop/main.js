@@ -200,3 +200,8 @@ Teacher.prototype.greeting = function (){
 }
 
 let teacher1 = new Teacher('Primeiro', 'Silva', 30, 'F', ['music'], 'Math')
+
+
+function Student(first, last, age, gender, interests, ){
+    Person.call(this, first, last, age, gender, interests)
+}
