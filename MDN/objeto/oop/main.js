@@ -158,6 +158,7 @@ Object.defineProperty(Teacher.prototype, 'constructor', {
     writable: true,
 }) // Usei essa parte para que o Teacher aponte para o Person, mas não faça referencia direta a ele, mas mostre como se fosse a copia e refenciando o Teacher
 
+
 /*
 -----Sobre HERANÇA------
     Existe a classe de objeto pai, a partir dela eu faço tanto as instancias que são criadas com o new
@@ -168,3 +169,34 @@ Object.defineProperty(Teacher.prototype, 'constructor', {
 
     Para criar um filho com as propriedades do pai, basta usar o call(this), já para usar os metodos(funções) é de uma forma diferente usando prototype
 */
+
+Teacher.prototype.greeting = function (){
+    let prefix
+
+    if(
+        this.gender === 'male' ||
+        this.gender === 'Male' ||
+        this.gender === 'm' ||
+        this.gender === 'M'
+    ){
+        prefix = 'Mr.'
+    }else if(
+        this.gender === 'female' ||
+        this.gender  === 'Female' ||
+        this.gender === 'f' ||
+        this.gender === 'F'
+    ){
+        prefix = 'Mrs.'
+    }else {
+        prefix = 'Mx.'
+    }
+
+    alert(
+        'Hello. My name is' + prefix + ' ' +
+        this.name.last + 
+        ', and I teach ' +
+        this.subject + '.'
+    )
+}
+
+let teacher1 = new Teacher('Primeiro', 'Silva', 30, 'F', ['music'], 'Math')

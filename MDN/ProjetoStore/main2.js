@@ -37,3 +37,14 @@ produtos.forEach(p =>{
    container.appendChild(localProdutos)
 })
 
+function ProdFilho() {
+    prod.call(this)
+}
+
+ProdFilho.prototype = Object.create(Prod.prototype)
+
+Object.defineProperties(ProdFilho.prototype, 'constructor',{
+    value:ProdFilho,
+    enumerable: false,
+    writable: true,
+})
