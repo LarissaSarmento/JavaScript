@@ -150,7 +150,7 @@ function BlueGlasssBrick(){
     this.color = 'blue'
 }
 
-Teacher.prototype = Object.create(Person.prototype)
+Teacher.prototype = Object.create(Person.prototype) // Aqui faz com que o Teacher seja um objeto novo, cuja cadeia de prototipos aponta para person, mas os metodos são de Person, por isso abaixo preciso trazer os metodos para ele
 
 Object.defineProperty(Teacher.prototype, 'constructor', {
     value: Teacher,
@@ -202,6 +202,42 @@ Teacher.prototype.greeting = function (){
 let teacher1 = new Teacher('Primeiro', 'Silva', 30, 'F', ['music'], 'Math')
 
 
-function Student(first, last, age, gender, interests, ){
+
+
+function Student(first, last, age, gender, interests ){
     Person.call(this, first, last, age, gender, interests)
 }
+
+Student.prototype = Object.create(Person.prototype)
+
+Object.defineProperty(Student.prototype, 'constructor', {
+    value: Student,
+    enumerable: false,
+    writable: true,
+})
+
+Student.prototype.greeting = function() {
+    let typePron
+
+    if(
+        this.gender === 'Male' ||
+        this.gender === 'male' ||
+        this.gender === 'M' ||
+        this.gender === 'm'
+    ){
+        typePron = 'Man'
+    }else if(
+        this.gender === 'female' ||
+        this.gender === 'Female' ||
+        this.gender === 'F' ||
+        this.gender === 'f'
+    ){
+        typePron = 'Senhorita'
+    } else {
+        typePron = 'Lá ele'
+    }
+    alert('Yo! I\'m' + typePron + ' ' +
+        this.name.last + ' ' + this.name.first + '.' )
+}
+
+let student1 = new Student('Larissa ', 'Sarmento ', 25, 'f', ['Neurociencia'])
