@@ -241,3 +241,49 @@ Student.prototype.greeting = function() {
 }
 
 let student1 = new Student('Larissa ', 'Sarmento ', 25, 'f', ['Neurociencia'])
+
+
+//--------------- Forma mais moderna resumida de fazer classe e herança
+
+class ModernPerson {
+    constructor(first, last, age, gender, interests){
+        this.name = {
+            first,
+            last,
+        }
+        this.age = age
+        this.gender = gender
+        this.interests = interests
+    }
+
+    greeting(){
+        console.log(`Hi! Saudação! I\'m' ${this.name.first}`)
+    }
+
+    farewell(){
+        console.log(`${this.name.first} has left the building. Bye for now!`)
+    }
+}
+
+let han = new ModernPerson('Han', 'Solo', 25, 'm', ['interesse1'])
+han.greeting()
+
+let leia = new ModernPerson('Leia', 'Organa', 36, 'famale', ['interesse2'])
+leia.farewell()
+
+
+class MordernTeacher extends ModernPerson {
+    constructor(first, last, age, gender, insterests, subject, grade){
+        super(first, last, age, gender, insterests)
+    
+
+    this.subject = subject
+    this.grade = grade
+}
+}
+
+let snape = new MordernTeacher('Professor', 'Sobrenome Teacher', 58, 'male', ['Potions'], 'Dark arts', 5)
+snape.greeting()
+snape.farewell()
+snape.age
+snape.subject

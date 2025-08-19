@@ -1,5 +1,5 @@
 
-class prod{
+class Prod{
     constructor(nome, preco, img, adCarrinho){ // Só passo no construtor os métodos que sempre precisarão criar um novo
     this.nome = nome
     this.preco = preco
@@ -37,14 +37,6 @@ produtos.forEach(p =>{
    container.appendChild(localProdutos)
 })
 
-function ProdFilho() {
-    prod.call(this)
+class ProdFilho extends Prod() {
+    
 }
-
-ProdFilho.prototype = Object.create(Prod.prototype)
-
-Object.defineProperties(ProdFilho.prototype, 'constructor',{
-    value:ProdFilho,
-    enumerable: false,
-    writable: true,
-})
