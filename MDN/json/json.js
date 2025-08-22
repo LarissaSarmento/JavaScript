@@ -48,7 +48,7 @@ function showHeroes(jsonObj){
         myPara2.textContent = 'Age: ' + heroes[i].age
         myPara3.textContent = 'Superpowers:'
 
-        let superPowers = heroes[i].superPowers
+        let superPowers = heroes[i].powers
         for (let j=0; j < superPowers.length; j++){
             let listItem = document.createElement('li')
             listItem.textContent = superPowers[j]
