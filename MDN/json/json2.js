@@ -30,7 +30,7 @@ function populateHeader(jsonObj){
 function showHeroes(jsonObj){
     let heroes = jsonObj['members']
 
-    for(i=0; i< heroes.lenght; i++){
+    for(i=0; i< heroes.length; i++){
     let myArticle = document.createElement('article')
     let myH2 = document.createElement('h2')
     let myPara1 = document.createElement('p')
@@ -40,7 +40,7 @@ function showHeroes(jsonObj){
 
 
     myH2.textContent = heroes[i].name
-    myPara1.textContent = 'Identidade Secret: ' + heroes[i].secretIdentify
+    myPara1.textContent = 'Identidade Secret: ' + heroes[i].secretIdentity
     myPara2.textContent = 'Age: ' + heroes[i].age
     myPara3.textContent = 'SuperPowers: '
 
