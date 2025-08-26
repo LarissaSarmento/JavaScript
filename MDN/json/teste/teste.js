@@ -18,13 +18,10 @@ function displayCatInfo(catString) {
 
   for(i=0; i < dados.length; i++){
     let mostrar = dados[i]
-   let calculo = dados.length
+    let calculo = dados.length
    
   }
-
-
-
-
+  
   // Add your code here
 
   // Don't edit the code below here!
