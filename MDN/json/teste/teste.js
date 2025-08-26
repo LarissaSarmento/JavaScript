@@ -14,12 +14,15 @@ fetch(requestURL) // Aqui poderia buscar a URL direto, busca URL
 function displayCatInfo(catString) {
   let total = 0;
   let male = 0;
-  let dados = JSON.parse(catString)
+  let dados = JSON.parse(catString)  
 
   for(i=0; i < dados.length; i++){
     let mostrar = dados[i]
-    para1.textContent = `Aqui ${mostrar}`
+   let calculo = dados.length
+   
   }
+
+
 
 
   // Add your code here
