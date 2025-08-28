@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const nome = 'Bruno';
-const canal = 'CTBCursos';
+let nome;
+nome = 'Larissa';
 console.log(nome);
-console.log(canal);
+//Tipagem
