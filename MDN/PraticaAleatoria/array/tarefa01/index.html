@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Image gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+   <style>
+* {
+  box-sizing: border-box;
+}
+
+p {
+  color: purple;
+  margin: 0.5em 0;
+}
+   </style>
+      
+  </head>
+
+  <body>
+<section></section>
+    <script>
+
+      let myArray = ['Pink Floyd', ' SOAD', ' Slipknot']
+      myArray[0] = 'PrimeiroAlterado'
+      myArray[1]= 'SegundoAlterado'
+
+      myArray.unshift('nshift')
+
+      const section = document.querySelector('section')
+      const para1 = document.createElement('p')
+      para1.textContent = `Array: ${myArray}`
+      section.appendChild(para1)
+
+    </script>
+
+  </body>
+</html>
