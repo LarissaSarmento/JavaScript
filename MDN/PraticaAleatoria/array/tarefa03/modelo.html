@@ -20,7 +20,7 @@ p {
   </head>
 
   <body>
-<section></section>
+<section> </section>
     <script>
       const myArray = [
         "Ryu",
@@ -32,12 +32,22 @@ p {
         "Sagat",
         "Juri",
       ]
+      
+      myArray.pop()
+      myArray.splice(-2, 2, "Penultimo", "Ultimo")
 
 
-      const sections = document.querySelector('section')
+    const newArray = myArray.map((valorArray, indiceArray) => `${valorArray}, (${indiceArray})`) // Aqui o map já é feito com valor e posição do arrau, posso usar qualquer variável para referenciar
+
+    let  myString = myArray.join("-") 
+
+      const section = document.querySelector('section')
       const para1 = document.createElement('p')
+      const para2 = document.createElement('p')
       para1.textContent = myString
+      para2.textContent = newArray
       section.appendChild(para1)
+      section.appendChild(para2)
 
     </script>
 
