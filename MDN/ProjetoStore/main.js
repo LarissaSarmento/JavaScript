@@ -71,8 +71,7 @@ const modalContent = document.querySelector('.modal-content')
 
    function adicionarCarrinho(car){
     let adc = adc.addEventListener('click', ()=>{
-        for(let i = 0; i <= car.style; i++){
-            
+        for(let i = 0; i <= car.style; i++){          
         }
     })
     

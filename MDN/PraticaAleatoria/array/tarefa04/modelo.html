@@ -17,8 +17,17 @@
     <script>
       const birds = ["Parrots", "Falcons", "Eagles", "Emus", "Caracaras", "Egrets"]
 
-      birds.indexOf("Eagles")
-      let iBirds = 
+      let pegarEagles = birds.indexOf("Eagles")
+      birds.splice(pegarEagles,1, "lugar")
+      //let eBirds = birds.filter(bird=> bird.startsWith('E')) // O filter ercorre cada item do array e retorna true ou false dependendo da condição, por ex a variavel bird, procura com E, true apresenta, false não apresenta
+      let eBirds = []
+      for(let i = 0; i < birds.length; i++){
+        if(birds[i][0] === 'E'){
+          eBirds.push(birds[i])
+        }
+      }
+      for(let j = 0; j < eBirds.length; j++){       
+      }
 
       const section = document.querySelector('section')
       const para1 = document.createElement('p')
