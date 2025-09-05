@@ -1,6 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-let nome;
-nome = 'Larissa';
-console.log(nome);
+// let nome: string;
+// nome = 'Larissa'
+// console.log(nome)
 //Tipagem

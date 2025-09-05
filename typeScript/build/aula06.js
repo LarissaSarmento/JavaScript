@@ -1,6 +1,4 @@
-"use strict";
 // Array somente de leitura
-Object.defineProperty(exports, "__esModule", { value: true });
 let numeros = [20, 30, 40]; // Aqui declarei array do tipo number
 let tnumeros = [20, 30, 40, 'string']; // Outra forma que também pode ser usada para declarar tipo em array
 let ttnumeros = [20, 30, 40, 'string']; // Outra forma, igual a de cima

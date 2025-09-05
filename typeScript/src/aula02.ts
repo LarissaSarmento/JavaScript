@@ -1,5 +1,5 @@
-const nome = 'Bruno';
+const iinome = 'Bruno';
 const canal =  'CTBCursos';
 
-console.log(nome);
+console.log(iinome);
 console.log(canal);

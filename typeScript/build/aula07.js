@@ -1,6 +1,4 @@
-"use strict";
 // O JS não permite trabalhar com array de duplas, mas com ts isso é permitido
-Object.defineProperty(exports, "__esModule", { value: true });
 let coisas = [10, 20, 30, "string"]; // Aqui eu não especifico onde ficará uma string e um number
 let tcoisas = ["primeiraString", 20, true]; //Tem que sempre seguir o que foi declarado
 tcoisas[2] = false; //Posso alterar de true para false o boolean

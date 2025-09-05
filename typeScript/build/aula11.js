@@ -1,6 +1,4 @@
-"use strict";
 // type Assertion e TypeCast
-Object.defineProperty(exports, "__esModule", { value: true });
 //Type Assertion é basicamente afirmação de tipo, quando preciso afirmar que um tipo desconhecido é de um tipo conhecido
 let nvalor;
 let svalor;

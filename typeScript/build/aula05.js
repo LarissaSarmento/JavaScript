@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let cursos = ["JavaScript", "TypeScript", "c++", 100]; // Insindo dessa forma aceita e reconhece esses dois tipos: string e number
 let tcursos = ["teste"]; //Posso declarar uma string de array dessa forma também
 let valores = [10, 20, 200];

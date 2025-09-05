@@ -1,6 +1,4 @@
-"use strict";
 // Conceito de enumeradores, ENUMS
-Object.defineProperty(exports, "__esModule", { value: true });
 let dias = {
     segunda: ""
 };

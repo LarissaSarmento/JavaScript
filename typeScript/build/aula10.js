@@ -1,6 +1,4 @@
-"use strict";
 // NULL - UNDEFINED - UNKOWN
-Object.defineProperty(exports, "__esModule", { value: true });
 // NULL - Ele é um valor nulo, eu posso deixar uma variavel nula, mas nulo não é o mesmo que vazio, ele tem um tipo de valor vazio
 let vnome;
 vnome = "Larissa";

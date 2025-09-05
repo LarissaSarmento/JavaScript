@@ -1,9 +1,7 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 class Curso {
-    canal = null;
-    curso = null;
     constructor(canal, curso) {
+        this.canal = null;
+        this.curso = null;
         this.canal = canal;
         this.curso = curso;
     }

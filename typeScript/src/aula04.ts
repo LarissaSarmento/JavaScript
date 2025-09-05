@@ -1,6 +1,6 @@
-let nome: string;
-nome = 'Larissa'
+// let nome: string;
+// nome = 'Larissa'
 
-console.log(nome)
+// console.log(nome)
 
 //Tipagem
