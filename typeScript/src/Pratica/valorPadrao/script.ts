@@ -12,5 +12,10 @@ class Produtos {
     ){
 
     }
+    
 }
+import imgAqui from '../../imagens/logo.jfif'
 
+let percorrerProd =[
+    new Produtos("Blusa", 15, imgAqui)
+]

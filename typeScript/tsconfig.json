@@ -7,7 +7,7 @@
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "none",
+    "module": "esnext",
     "target": "ES6", // Vai usar a ultima versão do typeScript
     "types": [],
     // For nodejs:
@@ -33,7 +33,7 @@
     // "noPropertyAccessFromIndexSignature": true,
 
     // Recommended Options
-    // "strict": true,
+    "strict": true,
     // "jsx": "react-jsx",
     // "verbatimModuleSyntax": true,
     // "isolatedModules": true,
