@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*Dentro de JS tudo é um valor e uma função também é um valor, tudo que faço com uma variável, consigo com a função*/
+        function soma(a,b){
+            return a + b
+        }
+
+        //Abaixo quer dizer que soma dois será a mesma função que soma, pois receber ela
+        const soma2 = soma // Aqui não estou chamando a função que seria soma(), se fizer isso é o mesmo que dizer que soma2 vai receber o resultado da função soma
+       
+        const result = soma2(1,2)
+       console.log(result)
+
+       const soma3 = (a,b) => a + b 
+
+       function printN(n){
+        console.log(n)
+       }
+
+       [1,2,3,4,5].forEach(printN) 
+
+
+    </script>
+</body>
+</html>
